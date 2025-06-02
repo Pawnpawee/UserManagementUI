@@ -1,1 +1,209 @@
-/* You can add global styles to this file, and also import other style files */
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --blue: #0496ff;
+  --lightblue: #56cbff;
+  --verylightblue: #eff4fa;
+  --black: #000035;
+  --white: #ffffff;
+  --gray: #757575;
+  --lightgray: #f5f5f5;
+  --darkblue: #1592ea;
+  --verylightgray: #d0c9c9;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--black) !important;
+  height: 100vh;
+  background-color: var(--lightgray);
+}
+
+.mdi {
+  font-size: 24px;
+}
+
+.nav-item {
+  font-size: 16px;
+}
+
+.nav-link {
+  color: var(--gray) !important;
+}
+
+.nav-link.active {
+  background-color: transparent !important;
+  border-right: 5px solid var(--blue);
+  border-radius: 0;
+  color: var(--blue) !important;
+}
+
+.blue-text {
+  color: var(--blue) !important;
+}
+
+.lightblue-text {
+  color: var(--lightblue) !important;
+}
+
+.black-text {
+  color: var(--black);
+}
+
+.gray-text {
+  color: var(--gray) !important;
+}
+
+.lightgray-text {
+  color: var(--lightgray);
+}
+
+.verylightblue-text {
+  color: var(--verylightblue) !important;
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.bg-lightgray {
+  background-color: var(--lightgray);
+}
+
+.bg-verylightblue {
+  background-color: var(--verylightblue);
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+}
+
+.dropdown-menu.show {
+  min-width: inherit;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  border: 0px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--blue);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.btn-primary,
+.text-bg-primary {
+  background-color: var(--blue) !important;
+  border: 0px;
+}
+
+.btn-primary:hover {
+  background-color: var(--darkblue) !important;
+}
+
+.badge {
+  font-size: 14px;
+  padding: 10px 0px 10px 0px;
+  min-width: 120px;
+}
+
+.text-bg-secondary {
+  background-color: var(--lightgray) !important;
+  color: var(--gray) !important;
+}
+
+table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.form-select-adjust {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid var(--gray);
+  border-radius: 0px;
+}
+
+.form-select-adjust:focus,
+.form-select-adjust:focus-visible {
+  box-shadow: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid var(--gray);
+  border-radius: 0px;
+}
+
+.mdi-arrow-right.active {
+  color: var(--blue) !important;
+}
+
+.btn-icon {
+  color: var(--blue);
+  border: 1px solid var(--verylightgray);
+  background-color: transparent;
+}
+
+.border-gray {
+  border: 1px solid var(--verylightgray);
+}
+
+.btn-outline-primary {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  color: var(--blue) !important;
+  border: 1px solid var(--blue) !important;
+  background-color: var(--verylightblue) !important;
+}
+
+.add-user-modal , .edit-user-modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  padding: 90px 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-content {
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Responsive padding for tablets and smaller devices */
+@media (max-width: 991.98px) {
+  .add-user-modal , .edit-user-modal {
+    padding: 80px 100px;
+  }
+}
+
+/* Even smaller padding for phones */
+@media (max-width: 575.98px) {
+  .add-user-modal , .edit-user-modal {
+    padding: 80px 40px;
+  }
+}
+
+.form-check-input {
+  border-color: var(--blue);
+}
+
+.form-check-input:checked {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}

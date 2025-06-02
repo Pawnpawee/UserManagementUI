@@ -1,0 +1,85 @@
+<!-- Toggle Button (Visible on small screens only) -->
+<button class="btn btn-outline-primary d-xl-none m-3 bg-light" type="button" data-bs-toggle="collapse"
+    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="mdi mdi-menu fs-4"></span>
+</button>
+
+<!-- Sidebar -->
+<div class="collapse d-xl-block" id="sidebarMenu">
+    <div aside class="d-flex flex-column flex-shrink-0 ps-3 h-100" style="width: 250px;">
+        <a class="d-flex align-items-center justify-content-center my-5 me-3"
+            [routerLink]="['']" routerLinkActive="active">
+            <img src="logo.png" alt="Logo" style="height: 70px;">
+        </a>
+
+        <ul class="nav nav-pills flex-column mb-5">
+            <li class="nav-item">
+                <a [routerLink]="['/']" class="nav-link d-flex align-items-center" aria-current="page"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <span class="mdi mdi-apple-keyboard-command me-3"></span>
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" aria-current="page">
+                    <span class="mdi mdi-poll me-3"></span>
+                    Users
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a [routerLink]="['/documents']" class="nav-link d-flex align-items-center" aria-current="page"
+                    routerLinkActive="active">
+                    <span class="mdi mdi-file-document-outline me-3"></span>
+                    Documents
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" aria-current="page">
+                    <span class="mdi mdi-image me-3"></span>
+                    Photos
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" aria-current="page">
+                    <span class="mdi mdi-hand-coin-outline me-3"></span>
+                    Hirarchy
+                </a>
+            </li>
+
+
+        </ul>
+
+        <ul class="nav nav-pills flex-column mb-auto">
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" aria-current="page">
+                    <span class="mdi mdi-message-processing-outline me-3"></span>
+                    Message
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" aria-current="page">
+                    <span class="mdi mdi-help-circle-outline me-3"></span>
+                    Help
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" aria-current="page">
+                    <span class="mdi mdi-cog-outline me-3"></span>
+                    Setting
+                </a>
+            </li>
+
+
+        </ul>
+
+
+    </div>

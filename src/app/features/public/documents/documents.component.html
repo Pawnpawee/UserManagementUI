@@ -1,0 +1,265 @@
+<div class="px-5 d-flex flex-column gap-4">
+    <h4 class="fw-bold blue-text mb-0">Documents</h4>
+
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+
+        <!-- Search Bar -->
+        <form class="d-flex align-items-center rounded-3 px-2 py-1 bg-white flex-grow-1" role="search">
+            <button class="btn p-0 border-0 bg-transparent" type="submit" aria-label="Search">
+                <span class="mdi mdi-magnify fs-5 text-secondary"></span>
+            </button>
+            <input type="search" placeholder="Search documents" aria-label="Search"
+                class="form-control border-0 shadow-none ps-2" />
+        </form>
+
+        <!-- Sort By Dropdown -->
+        <div class="dropdown">
+            <button class="btn d-flex align-items-center border-0 gap-1" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="mdi mdi-sort-variant"></span> Sort By
+                <span class="mdi mdi-chevron-down fs-6"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Name</a></li>
+                <li><a class="dropdown-item" href="#">Created Date</a></li>
+                <li><a class="dropdown-item" href="#">Role</a></li>
+            </ul>
+        </div>
+
+        <!-- Filter Icon -->
+        <button class="btn p-2 border-0">
+            <span class="mdi mdi-tune"></span>
+        </button>
+
+    </div>
+
+    <div class="d-flex justify-content-between flex-wrap gap-3">
+        <div class="d-flex gap-3 flex-wrap">
+            <button class="btn-icon rounded-1 px-2">
+                <span class="mdi mdi-cellphone-link"></span>
+            </button>
+            <button class="btn-icon rounded-1 px-2">
+                <span class="mdi mdi-arrow-expand-all"></span>
+            </button>
+            <button class="btn-icon rounded-1 px-2">
+                <span class="mdi mdi-printer"></span>
+            </button>
+            <button class="btn-icon rounded-1 px-2">
+                <span class="mdi mdi-notebook-multiple"></span>
+            </button>
+            <button class="btn-icon rounded-1 px-2">
+                <span class="mdi mdi-trash-can"></span>
+            </button>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+            <!-- This Month Dropdown -->
+            <div class="dropdown">
+                <button class="btn d-flex align-items-center border-1 gap-1 border-gray" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    This Month
+                    <span class="mdi mdi-chevron-down fs-6 ms-5"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">January</a></li>
+                    <li><a class="dropdown-item" href="#">February</a></li>
+                    <li><a class="dropdown-item" href="#">March</a></li>
+                </ul>
+            </div>
+
+            <!-- Documents Dropdown -->
+            <div class="dropdown">
+                <button class="btn d-flex align-items-center gap-1 border-gray" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Documents 
+                    <span class="mdi mdi-chevron-down fs-6 ms-5"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mock up</a></li>
+                    <li><a class="dropdown-item" href="#">Mock up</a></li>
+                    <li><a class="dropdown-item" href="#">Mock up</a></li>
+                </ul>
+            </div>
+
+            <!-- Button -->
+            <button class="btn btn-primary">
+                <span class="mdi mdi-plus fs-5"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="rounded-4 bg-white pt-4 pb-2">
+
+        <div class="mb-3 ms-3">
+            <h5 class="fw-bold">List of documents</h5>
+            <small class="gray-text">Lorem ipsum dolor, sit amet consectetur</small>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle mb-0 border-top">
+                <tbody>
+
+                    <!-- Row Start -->
+                    <tr class="col-12">
+                        <td class="px-4 py-3 col-1">
+                            <span
+                                class="mdi mdi-file-document-outline bg-verylightblue blue-text rounded-2 py-2 px-3"></span>
+                        </td>
+                        <td class="px-4 py-3 col-2">
+                            <strong class="text-dark d-block">Lorem ipsum</strong>
+                            <small class="text-muted">24 Oct, 2015</small>
+                        </td>
+                        <td class="px-4 py-3 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            unde, doloribus iure quae enim accusamus possimus explicabo quo aperiam eum.</td>
+
+                        <td class="px-4 py-3 col-2 text-center">
+                            <button class="btn btn-sm p-2 border-0 text-primary" title="Edit">
+                                <span class="mdi mdi-file-edit-outline fs-5"></span>
+                            </button>
+                            <button class="btn btn-sm p-2 border-0 text-danger" title="Delete">
+                                <span class="mdi mdi-trash-can-outline fs-5"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="col-12">
+                        <td class="px-4 py-3 col-1">
+                            <span
+                                class="mdi mdi-file-document-outline bg-verylightblue blue-text rounded-2 py-2 px-3"></span>
+                        </td>
+                        <td class="px-4 py-3 col-2">
+                            <strong class="text-dark d-block">Lorem ipsum</strong>
+                            <small class="text-muted">24 Oct, 2015</small>
+                        </td>
+                        <td class="px-4 py-3 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            unde, doloribus iure quae enim accusamus possimus explicabo quo aperiam eum.</td>
+
+                        <td class="px-4 py-3 col-2 text-center">
+                            <button class="btn btn-sm p-2 border-0 text-primary" title="Edit">
+                                <span class="mdi mdi-file-edit-outline fs-5"></span>
+                            </button>
+                            <button class="btn btn-sm p-2 border-0 text-danger" title="Delete">
+                                <span class="mdi mdi-trash-can-outline fs-5"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="col-12">
+                        <td class="px-4 py-3 col-1">
+                            <span
+                                class="mdi mdi-file-document-outline bg-verylightblue blue-text rounded-2 py-2 px-3"></span>
+                        </td>
+                        <td class="px-4 py-3 col-2">
+                            <strong class="text-dark d-block">Lorem ipsum</strong>
+                            <small class="text-muted">24 Oct, 2015</small>
+                        </td>
+                        <td class="px-4 py-3 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            unde, doloribus iure quae enim accusamus possimus explicabo quo aperiam eum.</td>
+
+                        <td class="px-4 py-3 col-2 text-center">
+                            <button class="btn btn-sm p-2 border-0 text-primary" title="Edit">
+                                <span class="mdi mdi-file-edit-outline fs-5"></span>
+                            </button>
+                            <button class="btn btn-sm p-2 border-0 text-danger" title="Delete">
+                                <span class="mdi mdi-trash-can-outline fs-5"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="col-12">
+                        <td class="px-4 py-3 col-1">
+                            <span
+                                class="mdi mdi-file-document-outline bg-verylightblue blue-text rounded-2 py-2 px-3"></span>
+                        </td>
+                        <td class="px-4 py-3 col-2">
+                            <strong class="text-dark d-block">Lorem ipsum</strong>
+                            <small class="text-muted">24 Oct, 2015</small>
+                        </td>
+                        <td class="px-4 py-3 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            unde, doloribus iure quae enim accusamus possimus explicabo quo aperiam eum.</td>
+
+                        <td class="px-4 py-3 col-2 text-center">
+                            <button class="btn btn-sm p-2 border-0 text-primary" title="Edit">
+                                <span class="mdi mdi-file-edit-outline fs-5"></span>
+                            </button>
+                            <button class="btn btn-sm p-2 border-0 text-danger" title="Delete">
+                                <span class="mdi mdi-trash-can-outline fs-5"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="col-12">
+                        <td class="px-4 py-3 col-1">
+                            <span
+                                class="mdi mdi-file-document-outline bg-verylightblue blue-text rounded-2 py-2 px-3"></span>
+                        </td>
+                        <td class="px-4 py-3 col-2">
+                            <strong class="text-dark d-block">Lorem ipsum</strong>
+                            <small class="text-muted">24 Oct, 2015</small>
+                        </td>
+                        <td class="px-4 py-3 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            unde, doloribus iure quae enim accusamus possimus explicabo quo aperiam eum.</td>
+
+                        <td class="px-4 py-3 col-2 text-center">
+                            <button class="btn btn-sm p-2 border-0 text-primary" title="Edit">
+                                <span class="mdi mdi-file-edit-outline fs-5"></span>
+                            </button>
+                            <button class="btn btn-sm p-2 border-0 text-danger" title="Delete">
+                                <span class="mdi mdi-trash-can-outline fs-5"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="col-12">
+                        <td class="px-4 py-3 col-1">
+                            <span
+                                class="mdi mdi-file-document-outline bg-verylightblue blue-text rounded-2 py-2 px-3"></span>
+                        </td>
+                        <td class="px-4 py-3 col-2">
+                            <strong class="text-dark d-block">Lorem ipsum</strong>
+                            <small class="text-muted">24 Oct, 2015</small>
+                        </td>
+                        <td class="px-4 py-3 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+                            unde, doloribus iure quae enim accusamus possimus explicabo quo aperiam eum.</td>
+
+                        <td class="px-4 py-3 col-2 text-center">
+                            <button class="btn btn-sm p-2 border-0 text-primary" title="Edit">
+                                <span class="mdi mdi-file-edit-outline fs-5"></span>
+                            </button>
+                            <button class="btn btn-sm p-2 border-0 text-danger" title="Delete">
+                                <span class="mdi mdi-trash-can-outline fs-5"></span>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <nav class="d-flex align-items-center justify-content-between flex-wrap gap-3 p-3 border-top">
+
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+            <small class="gray-text">Items per page:</small>
+            <select class="form-select form-select-sm form-select-adjust w-auto gray-text">
+                <option selected>1</option>
+            </select>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <small class="gray-text">1 of 1</small>
+            <button class="btn btn-sm p-1 px-2 border-0">
+                <span class="mdi mdi-arrow-left gray-text"></span>
+            </button>
+            <button class="btn btn-sm p-1 px-2 border-0">
+                <span class="mdi mdi-arrow-right gray-text"></span>
+            </button>
+        </div>
+
+    </nav>
+
+
+
+
+</div>

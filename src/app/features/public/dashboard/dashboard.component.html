@@ -1,0 +1,156 @@
+<div class="px-5 d-flex flex-column gap-4">
+    <h4 class="fw-bold blue-text mb-0">Users Dashboard</h4>
+
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+
+        <!-- Search Bar -->
+        <form class="d-flex align-items-center rounded-3 px-2 py-1 bg-white flex-grow-1" role="search">
+            <button class="btn p-0 border-0 bg-transparent" (click)="OnSearch(queryText.value)">
+                <span class="mdi mdi-magnify fs-5 text-secondary"></span>
+            </button>
+            <input type="search" placeholder="Search" aria-label="Search" #queryText
+                class="form-control border-0 shadow-none ps-2" />
+        </form>
+
+        <!-- Add User Button -->
+        <button class="btn btn-primary d-flex align-items-center" (click)="openAddUserModal()">
+            Add User
+            <span class="mdi mdi-plus fs-5 ms-1"></span>
+        </button>
+
+
+        <!-- Sort By Dropdown -->
+        <div class="dropdown">
+            <button class="btn d-flex align-items-center border-0 gap-1" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="mdi mdi-sort-variant"></span> Sort By
+                <span class="mdi mdi-chevron-down fs-6"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="Sort('Username','asc')">Name</a></li>
+                <li><a class="dropdown-item">Created Date</a></li>
+                <li><a class="dropdown-item" (click)="Sort('Role','asc')">Role</a></li>
+            </ul>
+        </div>
+
+        <!-- Saved Search Dropdown -->
+        <div class="dropdown">
+            <button class="btn d-flex align-items-center border-0 gap-1" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="mdi mdi-content-save-outline"></span> Saved Search
+                <span class="mdi mdi-chevron-down fs-6"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Mock Up</a></li>
+                <li><a class="dropdown-item" href="#">Mock Up</a></li>
+                <li><a class="dropdown-item" href="#">Mock Up</a></li>
+            </ul>
+        </div>
+
+        <!-- Filter Icon -->
+        <button class="btn p-2 border-0">
+            <span class="mdi mdi-tune"></span>
+        </button>
+
+    </div>
+
+    <div class="rounded-4 bg-white pt-4 pb-2">
+        <h5 class="fw-bold mb-3 ms-3">List Users</h5>
+
+        <ng-container>
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead class="bg-verylightblue">
+                        <tr>
+                            <th class="text-secondary px-4 py-3 bg-transparent">Name</th>
+                            <th class="text-secondary px-4 py-3 bg-transparent">Role</th>
+                            <th class="text-secondary px-4 py-3 bg-transparent">Created Date</th>
+                            <th class="text-secondary px-4 py-3 bg-transparent">Department</th>
+                            <th class="text-secondary px-4 py-3 bg-transparent text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row Start -->
+                        <tr *ngFor="let user of users">
+                            <td class="px-4 py-3">
+                                <strong class="text-dark d-block">{{user.firstName}} {{user.lastName}}</strong>
+                                <small class="text-muted">{{user.email}}</small>
+                            </td>
+                            <td class="px-4 py-3">
+                                <span class="badge rounded-pill"
+                                    [ngClass]="user.role?.roleName === 'Employee' ? 'text-bg-secondary' : 'text-bg-primary'">
+                                    {{ user.role?.roleName }}
+                                </span>
+                            </td>
+                            <td class="px-4 py-3 text-nowrap">24 Oct, 2015</td>
+                            <td class="px-4 py-3">Lorem Ipsum</td>
+                            <td class="px-4 py-3 text-center">
+                                <button class="btn btn-sm p-2 border-0 text-primary" title="Edit"
+                                    (click)="openEditUserModal(user.userId)">
+                                    <span class="mdi mdi-file-edit-outline fs-5"></span>
+                                </button>
+                                <button class="btn btn-sm p-2 border-0 text-danger" title="Delete"
+                                    (click)="deleteUser(user.userId)">
+                                    <span class="mdi mdi-trash-can-outline fs-5"></span>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </ng-container>
+    </div>
+
+    <nav class="d-flex align-items-center justify-content-between flex-wrap gap-3 p-3 border-top">
+
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+            <small class="gray-text">Items per page:</small>
+            <select class="form-select form-select-sm form-select-adjust w-auto gray-text" [(ngModel)]="pageSize"
+                (change)="onPageSizeChange()">
+                <option [value]="5">5</option>
+                <option [value]="10">10</option>
+                <option [value]="15">15</option>
+            </select>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <small class="gray-text">
+                {{ rangeStart }}–{{ rangeEnd }} of {{ totalCount || 0 }}
+            </small>
+
+            <button class="btn btn-sm p-1 px-2 border-0" (click)="getPrevPage()" [disabled]="pageNumber === 1">
+                 <span class="mdi mdi-arrow-left" 
+                 [ngClass]="{ 
+                    'gray-text': pageNumber === 1, 
+                    'blue-text': pageNumber !== 1 }">
+                </span>
+            </button>
+
+            <button class="btn btn-sm p-1 px-2 border-0" (click)="getNextPage()"
+                [disabled]="pageNumber === list.length">
+                <span class="mdi mdi-arrow-right" 
+                [ngClass]="{ 
+                    'gray-text': pageNumber === list.length, 
+                    'blue-text': pageNumber !== list.length }">
+                </span>
+            </button>
+        </div>
+
+
+    </nav>
+
+
+
+
+</div>
+
+<!-- Add User Modal -->
+<div class="add-user-modal" [ngClass]="{'d-block': isAddUserModalOpen , 'd-none': !isAddUserModalOpen}">
+    <app-add-user *ngIf="isAddUserModalOpen" (close)="closeAddUserModal()"></app-add-user>
+</div>
+
+<!-- Edit User Modal -->
+<div class="edit-user-modal" [ngClass]="{'d-block': isEditUserModalOpen , 'd-none': !isEditUserModalOpen}">
+    <app-edit-user *ngIf="isEditUserModalOpen" [userId]="selectedUserId" (close)="closeEditUserModal()"></app-edit-user>
+</div>
